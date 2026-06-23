@@ -40,7 +40,7 @@ export default function Dashboard() {
         justifyContent: "space-between",
         alignItems: "center",
       }}>
-        <h1 style={{ fontSize: "1.5rem", margin: 0 }}>🐾 Atacama Pets</h1>
+        <h1 style={{ fontSize: "1.5rem", margin: 0 }}>Atacama Pets</h1>
         <div style={{ display: "flex", alignItems: "center", gap: "1rem" }}>
           <span style={{ fontSize: "0.9rem" }}>
             {user?.nombre ?? "Usuario"} ({user?.rol ?? "sin rol"})

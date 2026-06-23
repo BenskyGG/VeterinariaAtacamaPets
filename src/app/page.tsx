@@ -19,10 +19,10 @@ export default function Login() {
     };
 
     if (nombre === CREDENCIALES_VALIDAS.usuario && password === CREDENCIALES_VALIDAS.clave) {
-      login({ nombre: "Administrador Atacama", rol: "Veterinario" });
+      login({ nombre: "Administrador", rol: "Veterinario" });
       router.push("/dashboard");
     } else {
-      alert("Credenciales incorrectas. Usuario: 12345 / Contraseña: 12345");
+      alert("Credenciales incorrectas. Vuelva a intentarlo.");
     }
   };
 

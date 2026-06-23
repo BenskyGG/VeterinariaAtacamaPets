@@ -1,36 +1,37 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+Sistema de Gestión de Usuarios y Productos Veterinaria - Atacama Pets
 
-## Getting Started
+Para este proyecto se tiene contemplado desarrollar una aplicación web tipo intranet, diseñada para optimizar y digitalizar los procesos operativos de la clínica veterinaria Atacama Pets. para esta evaluacion solo se sentrara en el historial clinicos de pacientes ademas del control de inventario médico, asegurando la integridad de los datos y restringiendo el acceso únicamente a personal autorizado.
 
-First, run the development server:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Se utilizaron las siguientes herramientas:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+1.Framework Base: Next.js (entorno React).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+2.Lenguaje(TypeScript): Para garantizar una consistencia estructural de los datos.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+3.UseContext: para el manejo global de la sesión del usuario.
 
-## Learn More
+4.LocalStorage: para el almacenamiento temporal y estructurado de la información.
 
-To learn more about Next.js, take a look at the following resources:
+Entre los Módulos implementados se encuentran:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. Módulo de Autenticación y Seguridad
+-Validación de credenciales mediante un formulario.
+-Implementación de un componente de orden superior (RutaProtegida) para asegurar las rutas internas y se ejecuten la redirección automática de usuarios no autenticados.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+2. Panel de Control (Dashboard)
+-Interfaz principal de navegación post-autenticación.
+-Identificación dinámica del usuario activo y su rol correspondiente dentro de la clínica.
+- Enrutamiento declarativo hacia los módulos operativos.
 
-## Deploy on Vercel
+3. Módulo de Gestión de Pacientes (CRUD)
+-Creación y Edición: Registro de mascotas con validación estricta de entradas en el formulario (prevención de caracteres no seguros y control de formato en los campos numéricos como RUT y Edad).
+-Búsqueda: Filtro indexado en tiempo real por el nombre del paciente.
+-Eliminación: Borrado de registros del sistema con confirmación previa.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+4. Módulo de Control de Inventario (CRUD)
+-Administración del stock de insumos, alimentos y medicamentos.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+-Registro de entidades con atributos específicos: código, nombre, categoría, stock, precio y fecha de caducidad.
+
+-Capacidad de actualización de existencias y eliminación de ítems del catálogo.
