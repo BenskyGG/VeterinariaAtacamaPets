@@ -14,7 +14,7 @@ export default function Login() {
     e.preventDefault();
 
     const CREDENCIALES_VALIDAS = {
-      usuario: "usuario12345",
+      usuario: "12345",
       clave: "12345"
     };
 
@@ -22,7 +22,7 @@ export default function Login() {
       login({ nombre: "Administrador Atacama", rol: "Veterinario" });
       router.push("/dashboard");
     } else {
-      alert("Credenciales incorrectas. Usuario: usuario12345 / Contraseña: 12345");
+      alert("Credenciales incorrectas. Usuario: 12345 / Contraseña: 12345");
     }
   };
 
